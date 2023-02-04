@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <style>
+       body {
+     background-image: linear-gradient(to bottom, #34f822, #fe0d45 70%);
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100vw;
+     height: 100vh;
+     overflow: hidden;
+   }
+      button {
+        padding: 10px 20px;
+        font-size: 18px;
+        border-radius: 5px;
+        position: absolute;
+      }
+
+      #yes {
+        background-color: green;
+        left: 20px;
+        top: 50px;
+      }
+
+      #no {
+        background-color: red;
+        right: 20px;
+        top: 50px;
+      }
+    </style>
+    <script>
+      function fleeNo() {
+        var x = Math.floor(Math.random() * 500);
+        var y = Math.floor(Math.random() * 500);
+        document.getElementById("no").style.top = x + "px";
+        document.getElementById("no").style.left = y + "px";
+      }
+
+      function answerYes() {
+        var luck = Math.floor(Math.random() * 10) + 1;
+        if (luck === 6) {
+          alert("hahaha i knew it ");
+        } else {
+          alert("I knew it");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Are you dumb?</h1>
+    <button id="yes" onclick="answerYes()">Yes</button>
+    <button id="no" onclick="fleeNo()">No</button>
+  </body>
+</html>
